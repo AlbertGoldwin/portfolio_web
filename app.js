@@ -6,7 +6,7 @@ const jobTitleContainers = document.querySelectorAll('.jobTitleContainer');
 const jobTitles = document.querySelectorAll('.jobTitle');
 const projectsTitle = document.querySelector('.projectsTitle');
 const phones = document.querySelectorAll('.phone');
-const laptop = document.querySelector('.laptop');
+const laptops = document.querySelectorAll('.laptop');
 
 for (let i = 0; i < 365; i++) {
   const list = [
@@ -36,15 +36,14 @@ window.addEventListener('scroll', () => {
   saluteImgContainer.style.transform = `translate(${offsetY * 0.4}px, ${
     offsetY * 0.5
   }px)`;
-  authorName.style.transform = `translateX(${
-    (offsetY - screen.height) * 0.4
-  }px)`;
+  authorName.style.transform = `translateX(calc(-100vh + ${offsetY}px))`;
   jobTitleContainers[0].style.backgroundPositionY = `${offsetY * 0.5}px`;
   jobTitleContainers[1].style.backgroundPositionY = `${-offsetY * 0.5}px`;
   jobTitles[0].style.transform = `translateX(calc(200vh - ${offsetY}px))`;
   jobTitles[1].style.transform = `translateX(calc(-300vh + ${offsetY}px))`;
   projectsTitle.style.transform = `translateY(calc(400vh - ${offsetY}px))`;
   phones[0].style.transform = `translateX(calc(500vh - ${offsetY * 1.08}px))`;
-  laptop.style.transform = `translateX(calc(610vh - ${offsetY}px))`;
-  phones[1].style.transform = `translateX(calc(725vh - ${offsetY}px))`;
+  laptops[0].style.transform = `translateX(calc(620vh - ${offsetY}px))`;
+  phones[1].style.transform = `translateX(calc(720vh - ${offsetY}px))`;
+  laptops[1].style.transform = `translateX(calc(875vh - ${offsetY}px))`;
 });
